@@ -1,10 +1,11 @@
 import React from 'react'
+import Header from "@/app/Sections/Header";
 
 const Home  = () => {
     return (
-        <div>
-            <h1 className="text-3xl font-bold underline">Hello World</h1>
-        </div>
+        <main className="overflow-hidden">
+            <Header/>
+        </main>
     )
 }
 export default Home
