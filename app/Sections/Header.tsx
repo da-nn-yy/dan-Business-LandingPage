@@ -26,7 +26,7 @@ const Header = () => {
         <div
           className={clsx(
             "w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
-            isOpen ? "max:lg:opacity-100" : "max:lg:pointer-events-none",
+            isOpen ? "max-lg:opacity-100" : "max:lg:pointer-events-none",
           )}
         >
           <div
@@ -41,7 +41,15 @@ const Header = () => {
                   <NavLink title="pricing" />
                 </li>
                 <li className="nav-logo">
-                  <Link href="/">
+                  <Link
+                    href="/"
+                    offset={-100}
+                    spy
+                    smooth
+                    className={clsx(
+                      "max-lg:hidden transition-transform duration-500 cursor-pointer",
+                    )}
+                  >
                     <Image
                       src="/images/xora.svg"
                       alt="logo"
@@ -57,6 +65,22 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
+            <div className="lg-hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -transate-y-1/2 rotate-90">
+              <Image
+                src="/images/bg-outlines.svg"
+                alt="outlines"
+                width={960}
+                height={380}
+                className="relative z-2"
+              />
+              <Image
+                src="/images/bg-outlines-fill.png"
+                alt="outlines"
+                width={960}
+                height={380}
+                className="absolute inset-0 mix-blend-soft-light"
+              />
+            </div>
           </div>
         </div>
         <button
