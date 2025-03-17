@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import clsx from "clsx";
 
 const NavLink = ({ title }: { title: string }) => (
   <Link
@@ -23,8 +24,10 @@ const Header = () => {
           <Image src="/images/xora.svg" alt="logo" width={115} height={115} />
         </a>
         <div
-          className="w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full
-        max-lg:bg-s2 max-lg:opacity-0"
+          className={clsx(
+            "w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full\n" +
+              "        max-lg:bg-s2 max-lg:opacity-0",
+          )}
         >
           <div
             className="max-lg:relative max-lg:flex max-lg:flex-col
@@ -62,8 +65,8 @@ const Header = () => {
         >
           <Image
             src={`/images/${isOpen ? "close" : "magic"}.svg`}
-            width={20}
-            height={20}
+            width={15}
+            height={15}
             alt="menu"
             className="size-1/2 object-contain"
           />
