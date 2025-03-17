@@ -44,8 +44,8 @@ const Header = () => {
                   <Link
                     href="/"
                     offset={-100}
-                    spy
-                    smooth
+                    spy={true}
+                    smooth={true}
                     className={clsx(
                       "max-lg:hidden transition-transform duration-500 cursor-pointer",
                     )}
@@ -65,7 +65,7 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
-            <div className="lg:hidden block absolute top-1/2 left-0 h-[380px] w-[960px] translate-x-[-290px] -translate-y-1/2 rotate-90">
+            <div className="lg:hidden block absolute right-0 top-1/2 h-[380px] w-[960px] translate-x-[290px] translate-y-[-50%] -rotate-[90deg]">
               <Image
                 src="/images/bg-outlines.svg"
                 alt="outlines"
