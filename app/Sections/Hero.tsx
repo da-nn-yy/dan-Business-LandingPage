@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Element } from "react-scroll";
+import { Link as LinkScroll, Element } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -14,6 +14,16 @@ const Hero = () => {
             <div className="caption small-2 uppercase text-p3">
               Video Editing
             </div>
+            <h1 className="mb-6 h1 text-p4 uppercase max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
+              Amazingly simple
+            </h1>
+            <p className="max-w-440 mb-14 body-1 max-md:mb-10">
+              We designed HAGERE AI video Editor to be an easy to use, quick to
+              learn, and surprisingly powerful.
+            </p>
+            <LinkScroll to="features" offset={-100} spy smooth>
+              TEXT
+            </LinkScroll>
           </div>
         </div>
       </Element>
