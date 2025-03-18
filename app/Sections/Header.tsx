@@ -1,21 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import clsx from "clsx";
+import { Link as LinkScroll } from "react-scroll";
 
-const NavLink = ({ title }: { title: string }) => (
-  <Link
-    className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1
-    max-lg:my-4 max-lg:h5"
-    href={`/${title}`}
-  >
-    {title}
-  </Link>
-);
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const NavLink = ({ title }: { title: string }) => (
+    <LinkScroll
+      className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1
+    max-lg:my-4 max-lg:h5"
+      onClick={() => setIsOpen(false)}
+      to={title}
+      offset={-100}
+      spy
+      smooth
+    >
+      {title}
+    </LinkScroll>
+  );
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full py-10">
@@ -26,7 +30,7 @@ const Header = () => {
         <div
           className={clsx(
             "w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
-            isOpen ? "max-lg:opacity-100" : "max:lg:pointer-events-none",
+            isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none",
           )}
         >
           <div
@@ -41,11 +45,11 @@ const Header = () => {
                   <NavLink title="pricing" />
                 </li>
                 <li className="nav-logo">
-                  <Link
-                    href="/"
-                    // offset={-100}
-                    // spy="true"
-                    // smooth="true"
+                  <LinkScroll
+                    to="hero"
+                    offset={-250}
+                    spy
+                    smooth
                     className={clsx(
                       "max-lg:hidden transition-transform duration-500 cursor-pointer",
                     )}
@@ -56,7 +60,7 @@ const Header = () => {
                       width={160}
                       height={55}
                     />
-                  </Link>
+                  </LinkScroll>
                 </li>
                 <li className="nav-li">
                   <NavLink title="faq" />
