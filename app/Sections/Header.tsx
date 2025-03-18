@@ -78,7 +78,7 @@ const Header = () => {
                 alt="outlines"
                 width={960}
                 height={380}
-                className="absolute inset-0 mix-blend-soft-light"
+                className="absolute inset-0 mix-blend-soft-light opacity-5"
               />
             </div>
           </div>
