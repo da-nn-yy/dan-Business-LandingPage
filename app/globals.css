@@ -3,6 +3,9 @@ layer(base);
 
 @import 'tailwindcss';
 
+html{
+  scroll-behavior: smooth;
+}
 @theme {
   --color-p1: #2ef2ff;
   --color-p2: #3c52d9;
