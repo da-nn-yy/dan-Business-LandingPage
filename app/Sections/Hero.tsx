@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32 border-2 border-amber-400"
+      className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32"
     >
       <Element name="hero">
         <div className="container">
@@ -24,8 +24,14 @@ const Hero = () => {
             </p>
             <LinkScroll to="features" offset={-100} spy smooth>
               <Button icon="/images/zap.svg">Try it now</Button>
-              TEXT
             </LinkScroll>
+          </div>
+          <div className="absolute -top-32 left-[calc(50%-340px)] w-[1230px] pointer-events-none hero-img_res">
+            <img
+              src="/images/hero.png"
+              className="size-1230 max-lg:h-auto"
+              alt="hero"
+            />
           </div>
         </div>
       </Element>
