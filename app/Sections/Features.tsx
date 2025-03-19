@@ -32,6 +32,7 @@ const Features = () => {
                 <Button icon={button.icon}>{button.title}</Button>
               </div>
             ))}
+            <ul className="relative flex justify-around flex-grow px-[5%] border-2 border-s3 rounded-7xl max-md:hidden"></ul>
           </div>
         </div>
       </Element>
