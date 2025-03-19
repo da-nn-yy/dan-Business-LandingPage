@@ -1,6 +1,7 @@
 "use client";
-import { Button, Element } from "react-scroll";
+import { Element } from "react-scroll";
 import { features } from "@/app/constants";
+import Button from "@/app/components/Button";
 
 const Features = () => {
   return (
