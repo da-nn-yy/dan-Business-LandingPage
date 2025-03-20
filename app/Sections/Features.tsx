@@ -2,6 +2,7 @@
 import { Element } from "react-scroll";
 import { details, features } from "@/app/constants";
 import Button from "@/app/components/Button";
+import Image from "next/image";
 
 const Features = () => {
   return (
@@ -17,10 +18,13 @@ const Features = () => {
                 <div className="w-full flex justify-start items-start">
                   <div className="-ml-3 mb-12 flex items-center justify-center flex-col">
                     <div className="w-0.5 h-16 bg-s3" />
-                    <img
+                    <Image
                       className="size-28 object-contain"
                       src={icon}
                       alt={title}
+                      width={28}
+                      height={28}
+                      unoptimized
                     />
                   </div>
                 </div>
@@ -38,10 +42,13 @@ const Features = () => {
                 <li key={id} className="relative pt-16 px-4 pb-14">
                   <div className="absolute top-8 bottom-0 left-1/2 bg-s3/20 w-[1px] h-full z-10" />
                   <div className="flex justify-center items-center mx-auto mb-3 border-2 border-s2 rounded-full hover:border-s4 transition-all duration-500 shadow-500 size-20">
-                    <img
+                    <Image
                       className="size-17/20 object-contain z-20"
                       src={icon}
                       alt={title}
+                      width={28}
+                      height={28}
+                      unoptimized
                     />
                   </div>
                   <h3 className="relative z-2 max-w-36 mx-auto my-0 base-small text-center uppercase">
