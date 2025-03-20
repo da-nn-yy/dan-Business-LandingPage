@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { Link as LinkScroll } from "react-scroll";
 
 const Header = () => {
-  const [hasScrolled, setHasScrolled] = useState("false");
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Header = () => {
     <header
       className={clsx(
         "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
-        hasScrolled && "bg-black-100/60 backdrop-blur-[8px] py-2",
+        hasScrolled && "py-2 bg-black-100/60 backdrop-blur-[8px]",
       )}
     >
       <div className="container flex h-14 items-center max-lg:px-5">
