@@ -10,14 +10,11 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 32);
-    };
-
+    const handleScroll = () => {};
+    setHasScrolled(window.scrollY > 32);
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const NavLink = ({ title }: { title: string }) => (
@@ -41,7 +38,7 @@ const Header = () => {
         hasScrolled && "py-2 bg-black-100/60 backdrop-blur-[8px]",
       )}
     >
-      <div className="container flex h-14 items-center max-lg:px-5">
+      <div className="container flex h-14 items-center max-lg:px-">
         <a className="lg:hidden flex-1 cursor-pointer z-2">
           <Image src="/images/xora.svg" alt="logo" width={115} height={115} />
         </a>
