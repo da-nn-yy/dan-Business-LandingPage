@@ -10,8 +10,9 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {};
-    setHasScrolled(window.scrollY > 32);
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 32);
+    };
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -24,8 +25,9 @@ const Header = () => {
       onClick={() => setIsOpen(false)}
       to={title}
       offset={-100}
-      spy
+      spy={true}
       smooth
+      activeClass="nav-active"
     >
       {title}
     </LinkScroll>
@@ -34,8 +36,8 @@ const Header = () => {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
-        hasScrolled && "py-2 bg-black-100/60 backdrop-blur-[8px]",
+        "fixed top-0 left-0 z-50 w-full transition-all duration-500 max-lg:py-4",
+        hasScrolled ? "py-2 bg-black-100/60 backdrop-blur-[8px]" : "py-10",
       )}
     >
       <div className="container flex h-14 items-center max-lg:px-">
@@ -72,7 +74,7 @@ const Header = () => {
                     <Image
                       src="/images/xora.svg"
                       alt="logo"
-                      width={160}
+                      width={165}
                       height={55}
                     />
                   </LinkScroll>
