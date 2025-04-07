@@ -4,6 +4,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 import { plans } from "@/app/constants";
+import CountUp from "react-countup";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -102,7 +103,14 @@ const Pricing = () => {
                         index === 1 ? "text-p3" : "text-p4",
                       )}
                     >
-                      $ AMOUNT
+                      $
+                      <CountUp
+                        start={plan.priceMonthly}
+                        end={monthly ? plan.priceMonthly : plan.priceYearly}
+                        duration={0.4}
+                        useEasing={false}
+                        preserveValue
+                      />
                     </div>
                   </div>
                 </div>
