@@ -7,6 +7,7 @@ import { plans } from "@/app/constants";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
+
   return (
     <section>
       <Element name="pricing">
@@ -72,10 +73,34 @@ const Pricing = () => {
                   <Image
                     src={plan.logo}
                     alt={plan.title}
-                    width={70}
-                    height={70}
-                    className={clsx("object-contain drop-shadow-2xl")}
+                    width={50}
+                    height={50}
+                    className={clsx(
+                      "object-contain drop-shadow-2xl",
+                      index === 1 ? "size-[120px]" : "size-[88px]",
+                    )}
                   />
+                </div>
+                <div
+                  className={clsx(
+                    "relative flex flex-col items:center",
+                    index === 1 ? "pt-24" : "pt-12",
+                  )}
+                >
+                  <div
+                    className={clsx(
+                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercased",
+                      index === 1 ? "border-p3 text-p3" : "border-p1 text-p1",
+                    )}
+                  >
+                    {plan.title}
+                  </div>
+                  <div
+                    className="rlative z-2 flex items-center justify-center
+                  "
+                  >
+                    $ Amount
+                  </div>
                 </div>
               </div>
             ))}
