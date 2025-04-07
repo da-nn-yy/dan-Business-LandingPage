@@ -13,6 +13,7 @@
     "next": "15.2.2",
     "prettier": "^3.5.3",
     "react": "^19.0.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
     "react-scroll": "^1.9.3"
   },
