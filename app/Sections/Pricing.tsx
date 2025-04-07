@@ -95,11 +95,15 @@ const Pricing = () => {
                   >
                     {plan.title}
                   </div>
-                  <div
-                    className="rlative z-2 flex items-center justify-center
-                  "
-                  >
-                    $ Amount
+                  <div className="rlative z-2 flex items-center justify-center">
+                    <div
+                      className={clsx(
+                        "h-num flex items-start",
+                        index === 1 ? "text-p3" : "text-p4",
+                      )}
+                    >
+                      $ AMOUNT
+                    </div>
                   </div>
                 </div>
               </div>
