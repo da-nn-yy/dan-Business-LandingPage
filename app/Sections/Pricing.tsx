@@ -5,6 +5,8 @@ import clsx from "clsx";
 import Image from "next/image";
 import { plans } from "@/app/constants";
 import CountUp from "react-countup";
+import outlines from "@/public/images/bg-outlines.svg";
+import outlineFill from "@/public/images/bg-outlines-fill.png";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -13,7 +15,7 @@ const Pricing = () => {
     <section>
       <Element name="pricing">
         <div className="container">
-          <div className="max-w-960 pricing-head_before relative max-auto border-l border-r border-s2 bg-s1/50 pb-40 pt-28 max-xl:max-w-4xl max-lg:border-none max-md:pb-32 max-md:pt-16">
+          <div className="max-w-960 pricing-head_before relative mx-auto border-l border-r border-s2 bg-s1/50 pb-40 pt-28 max-xl:max-w-4xl max-lg:border-none max-md:pb-32 max-md:pt-16">
             <h3 className="h3 max-lg:h4 max-md:h5 z-3 relative mx-auto mb-14 max-w-lg text-center text-p4 max-md:mb-11 max-sm:max-w-sm">
               Flexible pricing for teams of all size
             </h3>
@@ -27,7 +29,7 @@ const Pricing = () => {
               </button>
               <button
                 className={clsx("pricing-head_btn", !monthly && "text-p4")}
-                onClick={() => setMonthly(true)}
+                onClick={() => setMonthly(false)}
               >
                 Annual
               </button>
@@ -40,14 +42,14 @@ const Pricing = () => {
             </div>
             <div className="pricing-bg">
               <Image
-                src="/images/bg-outlines.svg"
+                src={outlines}
                 alt="outline"
                 width={960}
                 height={380}
                 className="relative z-2"
               />
               <Image
-                src="/images/bg-outlines-fill.png"
+                src={outlineFill}
                 alt="outline"
                 width={960}
                 height={380}
@@ -76,6 +78,7 @@ const Pricing = () => {
                     alt={plan.title}
                     width={50}
                     height={50}
+                    unoptimized
                     className={clsx(
                       "object-contain drop-shadow-2xl",
                       index === 1 ? "size-[120px]" : "size-[88px]",
@@ -112,8 +115,36 @@ const Pricing = () => {
                         preserveValue
                       />
                     </div>
+                    <div className="small-1 relative top-3 ml-1 uppercase">
+                      / mo
+                    </div>
                   </div>
                 </div>
+                <div
+                  className={clsx(
+                    "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4 ",
+                    index === 1 && "border-b",
+                  )}
+                >
+                  {plan.caption}
+                </div>
+                <ul className="mx-auto space-x-4 xl:px-7">
+                  {plan.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="relative flex items-center gap-5"
+                    >
+                      <Image
+                        src="/images/check.png"
+                        alt="check"
+                        width={10}
+                        height={10}
+                        className="size-10 object-contain"
+                        unoptimized
+                      />
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
