@@ -8,6 +8,7 @@ import CountUp from "react-countup";
 import outlines from "@/public/images/bg-outlines.svg";
 import outlineFill from "@/public/images/bg-outlines-fill.png";
 import Button from "@/app/components/Button";
+
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
 
