@@ -49,13 +49,13 @@ export const details = [
 export const faq = [
   {
     id: "0",
-    question: "How easy is it to setup Xora?",
+    question: "How easy is it to setup Hagere?",
     answer:
       "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
   },
   {
     id: "1",
-    question: "Can I integrate Xora with other platforms?",
+    question: "Can I integrate Hagere with other platforms?",
     answer:
       "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
   },
