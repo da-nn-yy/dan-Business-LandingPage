@@ -27,7 +27,7 @@ const Header = () => {
       offset={-100}
       spy
       smooth
-      activeClass="text-p3"
+      activeClass="nav-active"
     >
       {title}
     </LinkScroll>
