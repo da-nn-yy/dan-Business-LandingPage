@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState } from "react";
 import clsx from "clsx";
+import SlideDown from "react-slidedown/lib/slidedown";
+import "react-slidedown/lib/slidedown.css";
+
 interface FaqItemQuestion {
   question: string;
+  answer: string;
 }
 interface FaqItemProps {
   item: FaqItemQuestion;
@@ -39,9 +45,11 @@ const FaqItem = ({ item, index }: FaqItemProps) => {
             active && "before:bg-p1 after:rotate-0 after:bg-p1",
           )}
         >
-          <div className="size-11/12 rounded-full shadow-300 g4"></div>
+          <div className="size-11/12 rounded-full shadow-300 g4" />
         </div>
       </div>
+
+      <SlideDown>{activeId === item.id && <div>{item.answer}</div>}</SlideDown>
     </div>
   );
 };
