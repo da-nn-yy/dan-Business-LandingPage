@@ -1,6 +1,16 @@
 import clsx from "clsx";
 import Image from "next/image";
 import Marker from "@/app/components/Marker";
+import { MouseEventHandler, ReactNode } from "react";
+
+interface ButtonProps {
+  icon?: string;
+  children: ReactNode;
+  href?: string;
+  containerClassName?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  markerFill?: string;
+}
 
 const Button = ({
   icon,
@@ -9,7 +19,7 @@ const Button = ({
   containerClassName,
   onClick,
   markerFill,
-}) => {
+}: ButtonProps) => {
   const Inner = () => (
     <>
       <span className="relative flex items-center min-h-[60px] px-4 g4 rounded-2xl inner-before group-hover:before:opacity-100 overflow-hidden">
