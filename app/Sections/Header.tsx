@@ -25,9 +25,9 @@ const Header = () => {
       onClick={() => setIsOpen(false)}
       to={title}
       offset={-100}
-      spy={true}
+      spy
       smooth
-      activeClass="nav-active"
+      activeClass="text-p3"
     >
       {title}
     </LinkScroll>
