@@ -3,6 +3,7 @@ import Header from "@/app/Sections/Header";
 import Hero from "@/app/Sections/Hero";
 import Features from "@/app/Sections/Features";
 import Pricing from "@/app/Sections/Pricing";
+import Faq from "@/app/Sections/Faq";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Hero />
       <Features />
       <Pricing />
+      <Faq />
     </main>
   );
 };
