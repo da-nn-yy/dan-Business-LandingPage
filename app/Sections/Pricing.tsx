@@ -7,7 +7,7 @@ import { plans } from "@/app/constants";
 import CountUp from "react-countup";
 import outlines from "@/public/images/bg-outlines.svg";
 import outlineFill from "@/public/images/bg-outlines-fill.png";
-
+import Button from "@/app/components/Button";
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
 
@@ -128,12 +128,10 @@ const Pricing = () => {
                 >
                   {plan.caption}
                 </div>
-                <ul className="mx-auto space-x-4 xl:px-7">
+
+                <ul className="mx-auto space-y-4 xl:px-7">
                   {plan.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="relative flex items-center gap-5"
-                    >
+                    <li key={feature} className="flex items-center gap-5">
                       <Image
                         src="/images/check.png"
                         alt="check"
@@ -142,9 +140,18 @@ const Pricing = () => {
                         className="size-10 object-contain"
                         unoptimized
                       />
+                      <p className="flex-1">{feature}</p>
                     </li>
                   ))}
                 </ul>
+                <div className="mt-10 flex w-full justify-center">
+                  <Button icon={plan.icon}>Get Started</Button>
+                </div>
+                {index === 1 && (
+                  <p className="small-compact mt-9 text-p3 text-center before:content-['-'] after:mx-2.5 after:content-['-'] before:mx-2.5">
+                    Limited time offer
+                  </p>
+                )}
               </div>
             ))}
           </div>
