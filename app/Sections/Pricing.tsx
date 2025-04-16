@@ -107,7 +107,7 @@ const Pricing = () => {
                         index === 1 ? "text-p3" : "text-p4",
                       )}
                     >
-                      $
+                      <span className="text-5xl relative top-6">ETB</span>
                       <CountUp
                         start={plan.priceMonthly}
                         end={monthly ? plan.priceMonthly : plan.priceYearly}
