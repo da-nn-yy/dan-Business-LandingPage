@@ -4,6 +4,7 @@ import Hero from "@/app/Sections/Hero";
 import Features from "@/app/Sections/Features";
 import Pricing from "@/app/Sections/Pricing";
 import Faq from "@/app/Sections/Faq";
+import Testmonials from "@/app/Sections/Testmonials";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Features />
       <Pricing />
       <Faq />
+      <Testmonials />
     </main>
   );
 };
