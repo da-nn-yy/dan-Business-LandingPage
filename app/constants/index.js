@@ -164,7 +164,7 @@ export const testimonials = [
     role: "Globalnomads",
     avatarUrl: "/images/testimonials/jessica-saunders.png",
     comment:
-      "Xora's customer support is second to none! They’re like my tech superheroes, always there when I need them.",
+      "Hagere's customer support is second to none! They’re like my tech superheroes, always there when I need them.",
   },
   {
     id: "1",
@@ -196,7 +196,7 @@ export const testimonials = [
     role: "Floclips",
     avatarUrl: "/images/testimonials/becky-snider.png",
     comment:
-      "Switched to Xora last month, and I'm already seeing results. Best decision for our team!",
+      "Switched to Hagere last month, and I'm already seeing results. Best decision for our team!",
   },
   {
     id: "5",
