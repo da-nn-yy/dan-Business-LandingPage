@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Link as LinkScroll } from "react-scroll";
 
+interface navTitleProp {
+  title: string;
+}
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +21,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const NavLink = ({ title }) => (
+  const NavLink = ({ title }: navTitleProp) => (
     <LinkScroll
       onClick={() => setIsOpen(false)}
       to={title}
