@@ -46,7 +46,13 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center max-lg:px-">
         <a className="lg:hidden flex-1 cursor-pointer z-2">
-          <Image src="/images/xora.svg" alt="logo" width={115} height={115} />
+          <Image
+            src="/images/xora.svg"
+            alt="logo"
+            width={115}
+            height={115}
+            unoptimized
+          />
         </a>
         <div
           className={clsx(
