@@ -6,6 +6,7 @@ import Pricing from "@/app/Sections/Pricing";
 import Faq from "@/app/Sections/Faq";
 import Testmonials from "@/app/Sections/Testmonials";
 import Download from "@/app/Sections/Download";
+import Footer from "@/app/Sections/Footer";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Faq />
       <Testmonials />
       <Download />
+      <Footer />
     </main>
   );
 };
