@@ -378,13 +378,13 @@ export const links = [
   {
     id: "0",
     title: "Ios",
-    icon: <Ios />,
+    icon: <Android />,
     url: "#",
   },
   {
     id: "1",
     title: "Android",
-    icon: <Android />,
+    icon: <Ios />,
     url: "#",
   },
   {
