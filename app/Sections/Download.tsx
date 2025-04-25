@@ -1,6 +1,8 @@
 "use client";
 import { Element } from "react-scroll";
 import Image from "next/image";
+import { links } from "@/app/constants";
+import Marker from "@/app/components/Marker";
 
 const Download = () => {
   return (
@@ -15,12 +17,41 @@ const Download = () => {
               <div className="mb-10">
                 <Image
                   src={"./images/xora.svg"}
-                  alt="hagere Logo"
-                  width={100}
-                  height={100}
+                  alt="hagere"
+                  width={160}
+                  height={55}
                   unoptimized
                 />
               </div>
+              <p className="body-1 mb-10 max-w-md">
+                Try it now for free on Android, iOS,PC, Web - whatever your
+                flavor, we've got you covered.
+              </p>
+              <ul className="flex flex-wrap items-center gap-6">
+                {links.map(({ id, url, icon }) => (
+                  <li
+                    key={id}
+                    className="download_tech-link download_tech-link_last-before download_tech-link_last-after"
+                  >
+                    <a
+                      href={url}
+                      className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-border-color duration-500"
+                    >
+                      <span className="absolute -top-2 rotate-90">
+                        <Marker />
+                      </span>
+                      <Image
+                        src={"./images/lines.svg"}
+                        alt="lines"
+                        width={160}
+                        height={50}
+                        className="absolute size-13/20 object-contain"
+                      />
+                      <span className="download_tech-icon">{icon}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
